@@ -1,13 +1,24 @@
-# Your GitHub Learning Lab Repository for Introducing GitHub
+# GitHub slideshow
 
-Welcome to **your** repository for your GitHub Learning Lab course. This repository will be used during the different activities that I will be guiding you through. See a word you don't understand? We've included an emoji 📖 next to some key terms. Click on it to see its definition.
+> **Legacy course repository:** GitHub Learning Lab was deprecated and its course repositories were archived on September 1, 2022. The Learning Lab bot, issue-based lessons, and pull-request comments described by the original README are no longer active.
 
-Oh! I haven't introduced myself...
+For a current beginner course, use [GitHub Skills – Introduction to GitHub](https://github.com/skills/introduction-to-github).
 
-I'm the GitHub Learning Lab bot and I'm here to help guide you in your journey to learn and master the various topics covered in this course. I will be using Issue and Pull Request comments to communicate with you. In fact, I already added an issue for you to check out.
+This repository contains a small [reveal.js](https://github.com/hakimel/reveal.js/) slide deck. The reveal.js runtime is kept in the tracked `node_modules/reveal.js` directory, so no npm install is required for the checked-in presentation assets.
 
-![issue tab](https://lab.github.com/public/images/issue_tab.png)
+## Local development
 
-I'll meet you over there, can't wait to get started!
+The build uses Ruby, Bundler, Jekyll, and HTML Proofer. From the repository root:
 
-This course is using the :sparkles: open source project [reveal.js](https://github.com/hakimel/reveal.js/). In some cases we’ve made changes to the history so it would behave during class, so head to the original project repo to learn more about the cool people behind this project.
+```sh
+./script/setup
+./script/server
+```
+
+To build and validate the generated site without starting a server:
+
+```sh
+./script/cibuild
+```
+
+The staging script publishes to an external service and requires that service's credentials; it is not needed for local development.
